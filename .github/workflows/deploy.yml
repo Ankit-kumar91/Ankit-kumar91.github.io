@@ -32,14 +32,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy static assets to dist
-        run: |
-          cp aqsol.png dist/
-          cp agronomicare.png dist/
-          cp kickstarter.png dist/
-          cp akphoto2.png dist/
-          cp My_Resume.pdf dist/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

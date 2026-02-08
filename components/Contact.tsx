@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
     const contactLinks = [
         { icon: <MailIcon />, label: 'Email', value: PERSONAL_INFO.email, href: `mailto:${PERSONAL_INFO.email}` },
         { icon: <MapPinIcon />, label: 'Location', value: PERSONAL_INFO.address, href: '' },
-        { icon: <DocumentDownloadIcon />, label: 'Resume', value: 'Download Resume', href: '/My_Resume.pdf', download: true },
+        { icon: <DocumentDownloadIcon />, label: 'Resume', value: 'Download Resume', href: '/Ankit_Resume.pdf', download: true },
     ];
     const socialLinks = [
         { icon: <LinkedInIcon />, label: 'LinkedIn', href: PERSONAL_INFO.linkedinUrl },

@@ -2,12 +2,16 @@ import React from 'react';
 import Section from './Section';
 import { PERSONAL_INFO } from '../constants';
 import { MailIcon, LinkedInIcon, GitHubIcon, ScholarIcon, MapPinIcon, DocumentDownloadIcon } from './icons/Icons';
+import { useTheme } from '../ThemeContext';
 
 const Contact: React.FC = () => {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
+
     const contactLinks = [
         { icon: <MailIcon />, label: 'Email', value: PERSONAL_INFO.email, href: `mailto:${PERSONAL_INFO.email}` },
         { icon: <MapPinIcon />, label: 'Location', value: PERSONAL_INFO.address, href: '' },
-        { icon: <DocumentDownloadIcon />, label: 'Resume', value: 'ankitkumar_resume', href: '/resume.pdf', download: true },
+        { icon: <DocumentDownloadIcon />, label: 'Resume', value: 'Download Resume', href: '/My_Resume.pdf', download: true },
     ];
     const socialLinks = [
         { icon: <LinkedInIcon />, label: 'LinkedIn', href: PERSONAL_INFO.linkedinUrl },
@@ -16,17 +20,17 @@ const Contact: React.FC = () => {
     ];
 
     return (
-        <Section id="contact" title="Get in Touch" subtitle="I'm open to new opportunities and collaborations" className="border-t border-white/5">
+        <Section id="contact" title="Get in Touch" subtitle="I'm open to new opportunities and collaborations" className={`border-t ${isDark ? 'border-white/5' : 'border-gray-200'}`}>
             <div className="reveal max-w-3xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-4 mb-10">
                     {contactLinks.map((item) => (
-                        <div key={item.label} className="glass-card p-5 text-center">
+                        <div key={item.label} className={`p-5 text-center rounded-2xl transition-colors duration-300 ${isDark ? 'glass-card' : 'bg-white border border-gray-200 shadow-sm'}`}>
                             <div className="text-[#00d4ff] flex justify-center mb-3">{item.icon}</div>
-                            <div className="text-xs text-gray-500 mb-1">{item.label}</div>
+                            <div className={`text-xs mb-1 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{item.label}</div>
                             {item.href ? (
-                                <a href={item.href} {...(item.download ? { download: true } : {})} className="text-white text-sm font-medium hover:text-[#00d4ff] transition-colors">{item.value}</a>
+                                <a href={item.href} {...(item.download ? { download: true } : {})} className={`text-sm font-medium hover:text-[#00d4ff] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.value}</a>
                             ) : (
-                                <div className="text-white text-sm font-medium">{item.value}</div>
+                                <div className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.value}</div>
                             )}
                         </div>
                     ))}
@@ -41,7 +45,7 @@ const Contact: React.FC = () => {
                 <div className="flex items-center justify-center gap-4">
                     {socialLinks.map((link) => (
                         <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
-                           className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-500 hover:text-[#00d4ff] hover:bg-white/10 hover:border-[#00d4ff]/30 transition-all"
+                           className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all hover:text-[#00d4ff] ${isDark ? 'bg-white/5 border border-white/10 text-gray-500 hover:bg-white/10 hover:border-[#00d4ff]/30' : 'bg-gray-50 border border-gray-200 text-gray-400 hover:bg-gray-100 hover:border-[#00d4ff]/30'}`}
                            aria-label={link.label}>
                             {link.icon}
                         </a>

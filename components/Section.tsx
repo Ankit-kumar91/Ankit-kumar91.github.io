@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useTheme } from '../ThemeContext';
 
 interface SectionProps {
     id: string;
@@ -11,6 +12,8 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ id, title, subtitle, children, className = '' }) => {
     const sectionRef = useRef<HTMLElement>(null);
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -38,12 +41,12 @@ const Section: React.FC<SectionProps> = ({ id, title, subtitle, children, classN
         >
             <div className="max-w-6xl mx-auto px-6">
                 <div className="reveal text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                    <h2 className={`text-3xl md:text-4xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         {title}
                     </h2>
                     <div className="w-20 h-1 bg-[#00d4ff] mx-auto rounded-full mb-4"></div>
                     {subtitle && (
-                        <p className="text-lg max-w-2xl mx-auto text-gray-400">
+                        <p className={`text-lg max-w-2xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                             {subtitle}
                         </p>
                     )}

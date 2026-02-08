@@ -146,6 +146,7 @@ export const PROJECTS: Project[] = [
         link: 'https://github.com/Ankit-kumar91/AqSolPrediction',
         demoLink: 'https://huggingface.co/spaces/Ankitkumar91/aqsol-prediction',
         tags: ['Python', 'RDKit', 'Cheminformatics', 'Hugging Face', 'ML'],
+        image: '/aqsol.png',
     },
     {
         title: 'AgronomiCare: Plant Disease Prediction',
@@ -156,6 +157,7 @@ export const PROJECTS: Project[] = [
         ],
         link: 'https://github.com/Ankit-kumar91/AgronomiCare',
         tags: ['Python', 'Machine Learning', 'Web App', 'Agriculture'],
+        image: '/agronomicare.png',
     },
     {
         title: 'Kickstarter Success Prediction',
@@ -166,6 +168,7 @@ export const PROJECTS: Project[] = [
         ],
         link: 'https://github.com/Ankit-kumar91/ds-ml-project-kickstarter',
         tags: ['Python', 'XGBoost', 'Random Forest', 'Data Analysis'],
+        image: '/kickstarter.png',
     },
 ];
 

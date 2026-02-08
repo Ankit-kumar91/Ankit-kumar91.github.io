@@ -18,6 +18,12 @@ body {
   color: #d1d5db;
   background: #0a0a0a;
   line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] body {
+  color: #374151;
+  background: #f8f9fa;
 }
 
 ::selection {
@@ -208,6 +214,18 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #00d4ff;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #0097a7;
 }
 
 /* Glassmorphism card */

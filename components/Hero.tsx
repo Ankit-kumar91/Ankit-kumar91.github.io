@@ -3,7 +3,7 @@ import { PERSONAL_INFO } from '../constants';
 import { GitHubIcon, LinkedInIcon, ScholarIcon, ChevronDownIcon } from './icons/Icons';
 import { useTheme } from '../ThemeContext';
 
-const ROLES = ['Data Scientist', 'Chemist', 'Researcher', , 'AI Enthusiast'];
+const ROLES = ['Data Scientist', 'Chemist', 'R&D Scientist', 'Researcher'];
 
 const Hero: React.FC = () => {
     const [roleIndex, setRoleIndex] = useState(0);

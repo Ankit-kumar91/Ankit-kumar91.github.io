@@ -130,7 +130,7 @@ export const EDUCATION: Education[] = [
         degree: 'Bachelor of Science (B.Sc.)',
         period: '2007 – 2010',
         institution: 'CCS University Meerut, India',
-        description: 'Foundational studies in chemistry, biology, and botany.',
+        description: 'Foundational studies in chemistry, physics, and mathematics.',
     }
 ];
 

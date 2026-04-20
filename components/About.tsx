@@ -17,7 +17,7 @@ const About: React.FC = () => {
     const isDark = theme === 'dark';
 
     return (
-        <Section id="about" title="About Me" subtitle="Bridging Chemistry & Data Science">
+        <Section id="about" title="About Me" subtitle="Applying Machine Learning and Generative AI to Accelerate Drug Discovery and Molecular Design">
             <div className="grid md:grid-cols-2 gap-10">
                 {/* Left: Skills & Languages with progress bars */}
                 <div className="reveal space-y-8">

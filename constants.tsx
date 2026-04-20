@@ -8,10 +8,11 @@ import {
     PaintBrushIcon,
     DocumentTextIcon
 } from './components/icons/Icons';
+import Skills from './components/Skills';
 
 export const PERSONAL_INFO = {
     name: 'Ankit Kumar',
-    title: 'Data Scientist | Chemist | PhD Chemistry',
+    title: 'Computational Chemist | data Scientist | AI/ML in Drug Discovery',
     address: 'Troisdorf, Germany',
     email: 'chem.ak91@gmail.com',
     linkedin: 'ankit-kumar91-',
@@ -29,15 +30,16 @@ export const NAV_ITEMS: NavItem[] = [
     { name: 'Contact', href: '#contact' },
 ];
 
-export const PROFILE = `Data Scientist with a strong scientific background in chemistry and analytical techniques. Skilled at integrating data-driven methodologies, including Python and machine learning, into R&D workflows. Experienced in managing multiple research projects, collaborating across departments, and independently executing experiments.`;
+export const PROFILE = `Computational chemist and data science professional with a Ph.D. in Chemistry and over 7 years of experience in organic synthesis and experimental research, transitioning into AI-driven drug discovery. I apply machine learning, RDKit, molecular modeling (Maestro, LiveDesign), and molecular dynamics (GROMACS) to build predictive models and analyze molecular data, bridging experimental chemistry with AI-powered drug design.`;
 
 export const COMPETENCIES = [
     { category: 'AI & ML', skills: ['Machine Learning Algorithms', 'Deep Learning', 'Predictive Modeling', 'PyTorch', 'Scikit-Learn', 'Docker'] },
     { category: 'Cheminformatics', skills: ['RDKit', 'QSAR Modeling', 'Chemical Data Mining', 'Molecular Property Prediction'] },
+    { category: 'Computational Chemistry', Skills:['Molecular Docking', 'Molecular Dynamics (GROMACS)', 'CADD']}
     { category: 'Data Science', skills: ['Python', 'Pandas', 'NumPy', 'Statistical Analysis', 'Feature Engineering', 'Data Wrangling', 'EDA', 'Model Evaluation'] },
     { category: 'R&D', skills: ['Process Chemistry', 'Pharmaceutical Manufacturing', 'Yield Optimization', 'Scale-Up Development'] },
     { category: 'Analytical', skills: ['NMR', 'FT-IR', 'UV-Vis', 'HPLC', 'GC-MS', 'Mass Spectrometry', 'Chromatography'] },
-    { category: 'Tools', skills: ['SQL', 'PubChem', 'ChEMBL', 'Power BI', 'ChemDraw', 'Git', 'VS Code', 'PyMOL'] },
+    { category: 'Tools', skills: [ 'Maestro', 'LiveDesign','SQL', 'PubChem', 'ChEMBL', 'Power BI', 'ChemDraw', 'Git', 'VS Code', 'PyMOL'] },
 ];
 
 export const EXPERIENCES: Experience[] = [

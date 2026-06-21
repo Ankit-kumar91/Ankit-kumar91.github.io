@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './Section';
-import { EDUCATION } from '../constants';
+import { EDUCATION, CERTIFICATIONS } from '../constants';
 import { AcademicCapIcon } from './icons/Icons';
 import { useTheme } from '../ThemeContext';
 
@@ -9,7 +9,7 @@ const Education: React.FC = () => {
     const isDark = theme === 'dark';
 
     return (
-        <Section id="education" title="Education">
+        <Section id="education" title="Education & Certifications">
             <div className="reveal grid md:grid-cols-3 gap-6">
                 {EDUCATION.map((edu, index) => (
                     <div key={index} className={`p-6 card-hover relative overflow-hidden rounded-2xl transition-colors duration-300 ${isDark ? 'glass-card' : 'bg-white border border-gray-200 shadow-sm'}`}>
@@ -25,6 +25,21 @@ const Education: React.FC = () => {
                         <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{edu.description}</p>
                     </div>
                 ))}
+            </div>
+
+            <div className={`reveal mt-10 p-6 rounded-2xl transition-colors duration-300 ${isDark ? 'glass-card' : 'bg-white border border-gray-200 shadow-sm'}`}>
+                <h3 className={`text-lg font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>Certifications</h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                    {CERTIFICATIONS.map((cert, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00d4ff] flex-shrink-0"></span>
+                            <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                                <span className="font-medium">{cert.name}</span>
+                                <span className={isDark ? 'text-gray-500' : 'text-gray-500'}> — {cert.issuer}</span>
+                            </p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </Section>
     );

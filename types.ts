@@ -48,6 +48,11 @@ export interface Education {
   description: string;
 }
 
+export interface Certification {
+  name: string;
+  issuer: string;
+}
+
 export interface Skill {
   name: string;
   icon: React.ReactNode;

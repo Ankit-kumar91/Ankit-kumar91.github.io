@@ -1,18 +1,16 @@
 import React from 'react';
-import type { NavItem, Project, PublicationInfo, Experience, Education, SkillCategory, Publication, Language } from './types';
+import type { NavItem, Project, PublicationInfo, Experience, Education, Certification, SkillCategory, Publication, Language } from './types';
 import {
     BeakerIcon,
     ChartPieIcon,
     CodeBracketIcon,
     CpuChipIcon,
-    PaintBrushIcon,
     DocumentTextIcon
 } from './components/icons/Icons';
-import Skills from './components/Skills';
 
 export const PERSONAL_INFO = {
     name: 'Ankit Kumar',
-    title: 'Computational Chemist | data Scientist | AI/ML in Drug Discovery',
+    title: 'Computational Drug Discovery Scientist | AI/ML in Drug Discovery | CADD and Cheminformatics | PhD Chemistry',
     address: 'Troisdorf, Germany',
     email: 'chem.ak91@gmail.com',
     linkedin: 'ankit-kumar91-',
@@ -30,17 +28,7 @@ export const NAV_ITEMS: NavItem[] = [
     { name: 'Contact', href: '#contact' },
 ];
 
-export const PROFILE = `Computational chemist and data science professional with a Ph.D. in Chemistry and over 7 years of experience in organic synthesis and experimental research, transitioning into AI-driven drug discovery. I apply machine learning, RDKit, molecular modeling (Maestro, LiveDesign), and molecular dynamics (GROMACS) to build predictive models and analyze molecular data, bridging experimental chemistry with AI-powered drug design.`;
-
-export const COMPETENCIES = [
-    { category: 'AI & ML', skills: ['Machine Learning Algorithms', 'Deep Learning', 'Predictive Modeling', 'PyTorch', 'Scikit-Learn', 'Docker'] },
-    { category: 'Cheminformatics', skills: ['RDKit', 'QSAR Modeling', 'Chemical Data Mining', 'Molecular Property Prediction'] },
-    { category: 'Computational Chemistry', Skills:['Molecular Docking', 'Molecular Dynamics (GROMACS)', 'CADD']}
-    { category: 'Data Science', skills: ['Python', 'Pandas', 'NumPy', 'Statistical Analysis', 'Feature Engineering', 'Data Wrangling', 'EDA', 'Model Evaluation'] },
-    { category: 'R&D', skills: ['Process Chemistry', 'Pharmaceutical Manufacturing', 'Yield Optimization', 'Scale-Up Development'] },
-    { category: 'Analytical', skills: ['NMR', 'FT-IR', 'UV-Vis', 'HPLC', 'GC-MS', 'Mass Spectrometry', 'Chromatography'] },
-    { category: 'Tools', skills: [ 'Maestro', 'LiveDesign','SQL', 'PubChem', 'ChEMBL', 'Power BI', 'ChemDraw', 'Git', 'VS Code', 'PyMOL'] },
-];
+export const PROFILE = `Computational drug discovery scientist applying machine learning and AI to molecular design, with hands-on expertise in cheminformatics (RDKit), molecular modeling (Maestro, LiveDesign), and molecular dynamics (GROMACS). Backed by a Ph.D. in Chemistry and 7+ years of experimental research, I build predictive models and analyze molecular data to accelerate drug discovery, bridging AI/ML with chemistry.`;
 
 export const EXPERIENCES: Experience[] = [
     {
@@ -136,6 +124,14 @@ export const EDUCATION: Education[] = [
     }
 ];
 
+export const CERTIFICATIONS: Certification[] = [
+    { name: 'Designing Quality Ligand Libraries', issuer: 'Schrödinger' },
+    { name: 'Introduction to Molecular Modeling in Drug Discovery', issuer: 'Schrödinger' },
+    { name: 'MD Simulations & Computational Biophysics (GROMACS, VMD, ChimeraX)', issuer: 'BDGLifeSciences' },
+    { name: 'Generative AI & LLMs', issuer: 'NVIDIA-Certified Associate' },
+    { name: 'Data Science Bootcamp', issuer: 'neuefische GmbH' },
+];
+
 export const PROJECTS: Project[] = [
     {
         title: 'AqSolPrediction: Aqueous Solubility Prediction',
@@ -210,34 +206,34 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
             { name: 'Predictive Modeling', icon: <ChartPieIcon /> },
             { name: 'PyTorch', icon: <CodeBracketIcon /> },
             { name: 'Scikit-Learn', icon: <CodeBracketIcon /> },
+            { name: 'Generative AI / LLMs', icon: <CpuChipIcon /> },
         ]
     },
     {
-        title: 'Data Science & Analytics',
-        skills: [
-            { name: 'Python (Pandas, NumPy)', icon: <CodeBracketIcon /> },
-            { name: 'Statistical Analysis', icon: <ChartPieIcon /> },
-            { name: 'Feature Engineering', icon: <ChartPieIcon /> },
-            { name: 'SQL & Databases', icon: <DocumentTextIcon /> },
-            { name: 'Power BI & Visualization', icon: <ChartPieIcon /> },
-        ]
-    },
-    {
-        title: 'Cheminformatics',
+        title: 'Cheminformatics & CADD',
         skills: [
             { name: 'RDKit', icon: <BeakerIcon /> },
             { name: 'QSAR Modeling', icon: <BeakerIcon /> },
-            { name: 'Chemical Data Mining', icon: <BeakerIcon /> },
+            { name: 'Molecular Docking', icon: <BeakerIcon /> },
             { name: 'Molecular Property Prediction', icon: <CpuChipIcon /> },
         ]
     },
     {
-        title: 'Chemistry & Lab',
+        title: 'Molecular Modeling & Dynamics',
         skills: [
-            { name: 'NMR, FT-IR, UV-Vis', icon: <BeakerIcon /> },
-            { name: 'HPLC, GC-MS', icon: <BeakerIcon /> },
-            { name: 'Process Chemistry', icon: <PaintBrushIcon /> },
-            { name: 'Pharmaceutical Manufacturing', icon: <BeakerIcon /> },
+            { name: 'Molecular Dynamics (GROMACS)', icon: <BeakerIcon /> },
+            { name: 'Maestro & LiveDesign', icon: <BeakerIcon /> },
+            { name: 'VMD / ChimeraX', icon: <BeakerIcon /> },
+            { name: 'Ligand Library Design', icon: <BeakerIcon /> },
+        ]
+    },
+    {
+        title: 'Data Science & Chemistry',
+        skills: [
+            { name: 'Python (Pandas, NumPy)', icon: <CodeBracketIcon /> },
+            { name: 'Statistical Analysis', icon: <ChartPieIcon /> },
+            { name: 'SQL & Databases', icon: <DocumentTextIcon /> },
+            { name: 'NMR, FT-IR, UV-Vis, HPLC', icon: <BeakerIcon /> },
         ]
     },
 ];

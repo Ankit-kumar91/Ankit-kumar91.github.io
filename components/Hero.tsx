@@ -3,33 +3,33 @@ import { PERSONAL_INFO } from '../constants';
 import { GitHubIcon, LinkedInIcon, ScholarIcon, ChevronDownIcon } from './icons/Icons';
 import { useTheme } from '../ThemeContext';
 
-const ROLES = ['Data Scientist', 'Computational Chemist', 'AI/ML in Drug Discovery'];
+const TITLE_SEGMENTS = PERSONAL_INFO.title.split('|').map(s => s.trim());
 
 const Hero: React.FC = () => {
-    const [roleIndex, setRoleIndex] = useState(0);
-    const [text, setText] = useState('');
-    const [isDeleting, setIsDeleting] = useState(false);
     const { theme } = useTheme();
     const isDark = theme === 'dark';
+    const [segmentIndex, setSegmentIndex] = useState(0);
+    const [text, setText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        const currentRole = ROLES[roleIndex];
+        const currentSegment = TITLE_SEGMENTS[segmentIndex];
         let timeout: ReturnType<typeof setTimeout>;
 
-        if (!isDeleting && text === currentRole) {
+        if (!isDeleting && text === currentSegment) {
             timeout = setTimeout(() => setIsDeleting(true), 2000);
         } else if (isDeleting && text === '') {
             setIsDeleting(false);
-            setRoleIndex((prev) => (prev + 1) % ROLES.length);
+            setSegmentIndex((prev) => (prev + 1) % TITLE_SEGMENTS.length);
         } else {
-            const delta = isDeleting ? 50 : 100;
+            const delta = isDeleting ? 30 : 50;
             timeout = setTimeout(() => {
-                setText(currentRole.substring(0, text.length + (isDeleting ? -1 : 1)));
+                setText(currentSegment.substring(0, text.length + (isDeleting ? -1 : 1)));
             }, delta);
         }
 
         return () => clearTimeout(timeout);
-    }, [text, isDeleting, roleIndex]);
+    }, [text, isDeleting, segmentIndex]);
 
     return (
         <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-colors duration-300`}>
@@ -63,13 +63,13 @@ const Hero: React.FC = () => {
                             {PERSONAL_INFO.name}
                         </h1>
 
-                        <div className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 min-h-[2.5rem]">
-                            <span className="text-[#00d4ff]">{text}</span>
+                        <p className="text-lg md:text-xl lg:text-2xl font-medium mb-6 text-[#00d4ff] leading-snug min-h-[2.5rem]">
+                            <span>{text}</span>
                             <span className="typing-cursor"></span>
-                        </div>
+                        </p>
 
-                        <p className={`text-base md:text-lg max-w-xl mb-8 leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                            A Data Scientist by passion and a Chemist by profession, holding a Ph.D. in Chemistry. I work at the intersection of chemistry and machine learning, applying AI to solve practical scientific and industrial problems.
+                        <p className={`text-base md:text-lg max-w-xl mb-8 leading-relaxed text-justify ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                            I apply machine learning and AI to accelerate the discovery of novel, affordable therapeutics that improve human health. With a Ph.D. in Chemistry, I bridge cheminformatics, molecular modeling, and artificial intelligence to build end-to-end drug discovery solutions—from molecular design and data generation to predictive modeling and decision-making.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">

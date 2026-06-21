@@ -4,12 +4,12 @@ import { LANGUAGES, PROFILE } from '../constants';
 import { useTheme } from '../ThemeContext';
 
 const SKILL_BARS = [
+    { name: 'Machine Learning', level: 90 },
+    { name: 'RDKit / Cheminformatics', level: 85 },
     { name: 'Python', level: 90 },
-    { name: 'Machine Learning', level: 85 },
     { name: 'Deep Learning', level: 80 },
-    { name: 'Data Analysis', level: 90 },
-    { name: 'PyTorch', level: 75 },
-    { name: 'SQL', level: 80 },
+    { name: 'Molecular Modeling (Maestro)', level: 75 },
+    { name: 'Molecular Dynamics (GROMACS)', level: 70 },
 ];
 
 const About: React.FC = () => {
@@ -71,16 +71,16 @@ const About: React.FC = () => {
                     {/* Bio */}
                     <div className={`p-8 rounded-2xl transition-colors duration-300 ${isDark ? 'glass-card' : 'bg-white border border-gray-200 shadow-sm'}`}>
                         <h3 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>Who I Am</h3>
-                        <p className={`leading-relaxed text-sm mb-6 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{PROFILE}</p>
+                        <p className={`leading-relaxed text-sm mb-6 text-justify ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{PROFILE}</p>
 
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
                                 <span className="text-[#00d4ff] font-semibold text-sm min-w-[100px]">Profile:</span>
-                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Data Science & Analytics</span>
+                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>AI/ML & Computational Drug Discovery</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-[#00d4ff] font-semibold text-sm min-w-[100px]">Domain:</span>
-                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Data Science, Chemistry, Research & Development</span>
+                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>AI/ML, Cheminformatics, CADD, Chemistry</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-[#00d4ff] font-semibold text-sm min-w-[100px]">Education:</span>
@@ -102,7 +102,7 @@ const About: React.FC = () => {
                         {[
                             { value: '13', label: 'Publications' },
                             { value: 'Ph.D.', label: 'IIT Bombay' },
-                            { value: '5+', label: 'Years Research' },
+                            { value: '7+', label: 'Years Research' },
                             { value: 'B1', label: 'German Certified' },
                         ].map((stat) => (
                             <div key={stat.label} className={`p-4 text-center card-hover rounded-2xl transition-colors duration-300 ${isDark ? 'glass-card' : 'bg-white border border-gray-200 shadow-sm'}`}>

@@ -145,7 +145,7 @@ export const CERTIFICATIONS: Certification[] = [
 export const PROJECTS: Project[] = [
     {
         title: 'EGFR pIC50 Prediction — QSAR & Deep Learning for Kinase Inhibitor Potency',
-        description: 'Potency prediction for EGFR inhibitors, benchmarked honestly against scaffold-based splits and shipped with an uncertainty estimate on every prediction.',
+        description: 'Potency prediction for EGFR inhibitors, trained with classical ML and Chemprop GNN models, validated on scaffold-based splits with an uncertainty estimate on every prediction.',
         featured: true,
         metrics: [
             { value: '10,502', label: 'ChEMBL bioactivities' },

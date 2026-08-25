@@ -109,7 +109,7 @@ const Projects: React.FC = () => {
     const earlier = PROJECTS.filter((p) => !p.featured);
 
     return (
-        <Section id="projects" title="Selected Projects" subtitle="Drug discovery models built end to end — data curation, honest validation, and a deployed service">
+        <Section id="projects" title="Selected Projects" subtitle="Drug discovery models built end to end — data curation, classical ML and GNN training, and a deployed service">
             <div className="reveal grid md:grid-cols-2 gap-8">
                 {featured.map((project) => (
                     <ProjectCard key={project.title} project={project} isDark={isDark} detailed />

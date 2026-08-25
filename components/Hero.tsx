@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
                         <p className={`text-lg mb-2 font-light tracking-wide ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Hello, I'm</p>
 
                         <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                            {PERSONAL_INFO.name}
+                            {PERSONAL_INFO.name}, PhD
                         </h1>
 
                         <p className="text-lg md:text-xl lg:text-2xl font-medium mb-6 text-[#00d4ff] leading-snug min-h-[2.5rem]">

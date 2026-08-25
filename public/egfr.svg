@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img" aria-label="EGFR pIC50 prediction pipeline: 10,502 ChEMBL bioactivities, RDKit standardization, Bemis-Murcko scaffold split, model comparison, Random Forest best at RMSE 0.889 and Spearman rho 0.73, conformal intervals and applicability domain, deployed as Streamlit and FastAPI">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0097a7"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#0d1b24"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .t    { font-family: Poppins, "Helvetica Neue", Arial, sans-serif; fill: #e8f6fa; }
+    .lbl  { font-size: 30px; font-weight: 600; }
+    .sub  { font-size: 25px; fill: #8fa3ad; font-weight: 400; }
+    .cap  { font-size: 22px; fill: #00d4ff; font-weight: 600; letter-spacing: 3px; }
+    .big  { font-size: 62px; font-weight: 700; fill: #00d4ff; }
+    .bsub { font-size: 23px; fill: #8fa3ad; }
+    .box  { fill: #ffffff0a; stroke: #00d4ff33; stroke-width: 2; }
+  </style>
+
+  <rect width="1400" height="1050" fill="url(#bg)"/>
+
+  <text class="t cap" x="80" y="96">EGFR pIC50 PREDICTION</text>
+  <text class="t" x="80" y="152" font-size="40" font-weight="700">Model pipeline</text>
+  <line x1="80" y1="184" x2="270" y2="184" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- connector spine -->
+  <line x1="102" y1="248" x2="102" y2="716" stroke="#00d4ff2e" stroke-width="3"/>
+
+  <!-- 1 -->
+  <circle cx="102" cy="256" r="11" fill="#00d4ff"/>
+  <text class="t lbl" x="152" y="250">ChEMBL CHEMBL203</text>
+  <text class="t sub" x="152" y="288">10,502 curated bioactivities</text>
+
+  <!-- 2 -->
+  <circle cx="102" cy="374" r="11" fill="#00d4ff"/>
+  <text class="t lbl" x="152" y="368">RDKit standardization</text>
+  <text class="t sub" x="152" y="406">ECFP4 + RDKit descriptors</text>
+
+  <!-- 3 -->
+  <circle cx="102" cy="492" r="11" fill="#00d4ff"/>
+  <text class="t lbl" x="152" y="486">Bemis–Murcko scaffold split</text>
+  <text class="t sub" x="152" y="524">tests unseen chemotypes, not analogues</text>
+
+  <!-- 4 -->
+  <circle cx="102" cy="610" r="11" fill="#00d4ff"/>
+  <text class="t lbl" x="152" y="604">Models compared</text>
+  <text class="t sub" x="152" y="642">RF · XGBoost · LightGBM · Chemprop D-MPNN · CheMeleon</text>
+
+  <!-- 5 -->
+  <circle cx="102" cy="724" r="11" fill="#00d4ff"/>
+  <text class="t lbl" x="152" y="718">Conformal interval + AD flag</text>
+  <text class="t sub" x="152" y="756">every prediction ships with uncertainty</text>
+
+  <!-- result panel -->
+  <rect class="box" x="80" y="812" width="1240" height="148" rx="20"/>
+  <text class="t cap" x="116" y="856">BEST MODEL — RANDOM FOREST</text>
+  <text class="t big" x="116" y="928">0.889</text>
+  <text class="t bsub" x="116" y="954">Test RMSE</text>
+  <text class="t big" x="480" y="928">0.73</text>
+  <text class="t bsub" x="480" y="954">Spearman ρ</text>
+  <text class="t big" x="800" y="928">10,502</text>
+  <text class="t bsub" x="800" y="954">Compounds</text>
+  <text class="t bsub" x="1120" y="900" font-size="25" fill="#e8f6fa">Streamlit app</text>
+  <text class="t bsub" x="1120" y="936">FastAPI service</text>
+</svg>

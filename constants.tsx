@@ -10,25 +10,28 @@ import {
 
 export const PERSONAL_INFO = {
     name: 'Ankit Kumar',
-    title: 'Computational Drug Discovery Scientist | AI/ML in Drug Discovery | CADD and Cheminformatics | PhD Chemistry',
+    title: 'AI/ML for Drug Discovery | CADD and Cheminformatics | Ph.D. Chemistry',
     address: 'Troisdorf, Germany',
     email: 'chem.ak91@gmail.com',
     linkedin: 'ankit-kumar91-',
     linkedinUrl: 'https://www.linkedin.com/in/ankit-kumar91-/',
     github: 'Ankit-kumar91',
     githubUrl: 'https://github.com/Ankit-kumar91',
+    scholarUrl: 'https://scholar.google.com/citations?user=YTn_UVIAAAAJ&hl=en',
+    resumeUrl: '/Ankit_Kumar_CV.pdf',
 };
 
 export const NAV_ITEMS: NavItem[] = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Publications', href: '#publications' },
     { name: 'Contact', href: '#contact' },
 ];
 
-export const PROFILE = `Computational drug discovery scientist applying machine learning and AI to molecular design, with hands-on expertise in cheminformatics (RDKit), molecular modeling (Maestro, LiveDesign), and molecular dynamics (GROMACS). Backed by a Ph.D. in Chemistry and 7+ years of experimental research, I build predictive models and analyze molecular data to accelerate drug discovery, bridging AI/ML with chemistry.`;
+export const PROFILE = `Computational drug discovery scientist applying machine learning and AI to molecular design, with hands-on expertise in cheminformatics (RDKit), molecular modeling (Maestro, LiveDesign), and molecular dynamics (GROMACS). Backed by a Ph.D. in Chemistry and 7+ years of experimental research, I build predictive models and analyze molecular data to accelerate drug discovery, bridging AI/ML with chemistry. Most recently I have focused on structure-based virtual screening and free energy methods (FEP), combining physics-based scoring with machine learning to prioritize compounds. I train QSAR and graph neural network models on ChEMBL bioactivity data and deploy them as FastAPI and Streamlit services.`;
 
 export const EXPERIENCES: Experience[] = [
     {
@@ -37,10 +40,10 @@ export const EXPERIENCES: Experience[] = [
         company: 'Outlier.ai',
         location: 'Troisdorf, Germany (Remote)',
         description: [
+            'Create and curate high-quality datasets and evaluation frameworks for STEM-focused AI models and drug discovery agents',
             'Review, edit, and improve work submitted by peers to align with client requirements and quality standards',
             'Provide expert feedback on chemical data accuracy and scientific validity for AI training datasets',
-            'Provide comprehensive feedback and ratings on peer submissions to support quality improvement',
-            'Analyze the performance of AI models on chemistry-related tasks, identifying strengths, weaknesses, and areas for enhancement'
+            'Analyze the performance of AI models on chemistry tasks, identifying failure modes and areas for enhancement'
         ]
     },
     {
@@ -49,10 +52,9 @@ export const EXPERIENCES: Experience[] = [
         company: 'Self-Directed Learning',
         location: 'Troisdorf, Germany',
         description: [
-            'Self-study in machine learning fundamentals, deep learning, and AI applications in chemistry',
-            'Developed expertise in cheminformatics using RDKit for molecular property prediction and QSAR modeling',
-            'Achieved B1 German language certification enhancing professional communication in German work environments',
-            'NVIDIA-Certified Associate: Generative AI LLMs — Specialized training in large language models and AI applications'
+            'Focused study in machine learning fundamentals, deep learning, and AI applications in chemistry',
+            'Built cheminformatics expertise with RDKit for molecular property prediction and QSAR modeling',
+            'Earned NVIDIA-Certified Associate: Generative AI & LLMs, and B1 German certification'
         ]
     },
     {
@@ -61,10 +63,16 @@ export const EXPERIENCES: Experience[] = [
         company: 'neuefische GmbH — School for Digital Talent',
         location: 'Hamburg, Germany (Remote)',
         description: [
-            'Completed rigorous bootcamp covering machine learning algorithms, statistical modeling, and data science workflows',
-            'Developed end-to-end ML projects including data collection, preprocessing, model training, and evaluation',
-            'Gained proficiency in model performance metrics, cross-validation, and hyperparameter optimization'
+            'Intensive bootcamp in ML algorithms, statistical modeling, and end-to-end data science workflows',
+            'Delivered projects covering data collection, preprocessing, model training, evaluation, and deployment'
         ]
+    },
+    {
+        period: 'Jul 2022 – Oct 2023',
+        role: 'Full-Time Parenting',
+        company: 'Career Break',
+        location: 'Troisdorf, Germany',
+        description: []
     },
     {
         period: 'Dec 2020 – Jun 2022',
@@ -83,22 +91,21 @@ export const EXPERIENCES: Experience[] = [
         company: 'Neogen Chemicals Limited',
         location: 'Vadodara, India',
         description: [
-            'Implemented process chemistry to develop scalable methods for mass production of pharmaceutical intermediates',
-            'Synthesized 4-Methylphenol 4-IPMP with a 10% yield increase, reducing production costs',
-            'Conducted cost analysis and managed projects for synthesizing 2,6-Difluorobenzyl bromide, achieving a 15% yield improvement',
-            'Interpreted NMR, IR, and UV data, maintained laboratory records, and prepared reports'
+            'Developed scalable process chemistry routes for mass production of pharmaceutical intermediates',
+            'Achieved 10–15% yield improvements across two routes, reducing production cost and enhancing profitability',
+            'Interpreted NMR, IR, and UV data, maintained laboratory records, and prepared technical reports'
         ]
     },
     {
         period: 'Jul 2014 – Dec 2019',
-        role: 'Doctor of Philosophy (Ph.D.)',
+        role: 'Doctoral Researcher (Ph.D. Chemistry)',
         company: 'Indian Institute of Technology Bombay',
         location: 'Mumbai, India',
         description: [
             'Developed polyaromatic hydrocarbon based porphyrinoid macrocycles and metal complexes',
-            'Investigated aromatic, antiaromatic, and non-aromatic behavior of macrocycles through experimental and computational tools',
-            'Established structure–property relationships linking molecular architecture with electronic absorption and redox behavior',
-            'Published 13 peer-reviewed articles in high-impact journals'
+            'Investigated aromatic, antiaromatic, and non-aromatic behavior through experimental and computational tools',
+            'Established structure–property relationships linking molecular architecture to absorption and redox behavior',
+            'Published 13 peer-reviewed articles in journals including J. Org. Chem., Org. Lett., and Inorg. Chem.'
         ]
     },
 ];
@@ -108,7 +115,7 @@ export const EDUCATION: Education[] = [
         degree: 'Doctor of Philosophy (Ph.D.) in Chemistry',
         period: '2014 – 2019',
         institution: 'Indian Institute of Technology Bombay, Mumbai, India',
-        description: 'Focused on synthesis of porphyrinoid macrocycles, spectroscopic analysis, and structure-property relationships. Published 13 peer-reviewed articles.',
+        description: 'Synthesis of porphyrinoid macrocycles, spectroscopic analysis, and structure–property relationships. Strong hands-on background in NMR, HR-MS, UV–Vis, fluorescence, electrochemistry, and X-ray crystallography. 13 peer-reviewed articles.',
     },
     {
         degree: 'Master of Science (M.Sc.) in Chemistry',
@@ -120,59 +127,108 @@ export const EDUCATION: Education[] = [
         degree: 'Bachelor of Science (B.Sc.)',
         period: '2007 – 2010',
         institution: 'CCS University Meerut, India',
-        description: 'Foundational studies in chemistry, and life science.',
+        description: 'Foundational studies in chemistry and life sciences.',
     }
 ];
 
 export const CERTIFICATIONS: Certification[] = [
-    { name: 'Designing Quality Ligand Libraries', issuer: 'Schrödinger' },
+    { name: 'Applications of Free Energy Calculations in Modern Drug Hunting', issuer: 'Schrödinger', year: '2026' },
+    { name: 'Virtual Screening with Integrated Physics and Machine Learning', issuer: 'Schrödinger', year: '2026' },
+    { name: 'Target Enablement, Preparation, and Validation', issuer: 'Schrödinger', year: '2026' },
+    { name: 'Designing Quality Ligand Libraries', issuer: 'Schrödinger', year: '2026' },
     { name: 'Introduction to Molecular Modeling in Drug Discovery', issuer: 'Schrödinger' },
     { name: 'MD Simulations & Computational Biophysics (GROMACS, VMD, ChimeraX)', issuer: 'BDGLifeSciences' },
-    { name: 'Generative AI & LLMs', issuer: 'NVIDIA-Certified Associate' },
-    { name: 'Data Science Bootcamp', issuer: 'neuefische GmbH' },
+    { name: 'Generative AI & LLMs', issuer: 'NVIDIA-Certified Associate', year: '2024' },
+    { name: 'Data Science Bootcamp', issuer: 'neuefische GmbH', year: '2024' },
 ];
 
 export const PROJECTS: Project[] = [
     {
-        title: 'AqSolPrediction: Aqueous Solubility Prediction',
-        description: 'An end-to-end cheminformatics application for predicting aqueous solubility of chemical compounds using molecular descriptors and machine learning.',
+        title: 'EGFR pIC50 Prediction — QSAR & Deep Learning for Kinase Inhibitor Potency',
+        description: 'Potency prediction for EGFR inhibitors, benchmarked honestly against scaffold-based splits and shipped with an uncertainty estimate on every prediction.',
+        featured: true,
+        metrics: [
+            { value: '10,502', label: 'ChEMBL bioactivities' },
+            { value: '0.889', label: 'Test RMSE' },
+            { value: '0.73', label: 'Spearman ρ' },
+        ],
         bullets: [
-            'Built ML pipeline using RDKit molecular descriptors for aqueous solubility prediction of chemical compounds',
-            'Deployed interactive web app on Hugging Face Spaces with real-time SMILES input and prediction',
-            'Implemented feature engineering with molecular fingerprints and physicochemical property calculations'
+            'Curated 10,502 EGFR bioactivities from ChEMBL (CHEMBL203) with RDKit standardization and Bemis–Murcko scaffold splitting, so reported accuracy reflects generalization to unseen chemotypes rather than memorized analogues',
+            'Trained and compared classical ML (Random Forest, XGBoost, LightGBM on ECFP4 + RDKit descriptors), a message-passing GNN (Chemprop D-MPNN), and a CheMeleon fine-tune — Random Forest won on RMSE 0.889 / Spearman ρ 0.73',
+            'Shipped every prediction with a conformal uncertainty interval and an applicability-domain flag, so a chemist knows which predictions to act on',
+            'Deployed as a Streamlit app and a FastAPI service, containerized with Docker'
+        ],
+        link: 'https://github.com/Ankit-kumar91/egfr-pic50-prediction',
+        demoLink: 'https://pic50prediction.streamlit.app/',
+        demoLabel: 'Live demo',
+        tags: ['RDKit', 'Chemprop', 'PyTorch Geometric', 'Scikit-Learn', 'Conformal Prediction', 'FastAPI', 'Docker'],
+        image: '/egfr.svg',
+    },
+    {
+        title: 'Imatinib Resistance in BCR-ABL1 — All-Atom MD of the T315I Gatekeeper Mutation',
+        description: 'A 2×2 molecular dynamics study that reproduces a clinically observed resistance mechanism from first principles, and explains why the second-generation drug escapes it.',
+        featured: true,
+        metrics: [
+            { value: '1.2 µs', label: '12 × 100 ns runs' },
+            { value: '97% → 53%', label: 'Gatekeeper contact' },
+            { value: '0.6', label: 'H-bonds/frame lost' },
+        ],
+        bullets: [
+            'Designed a 2×2 panel (imatinib and ponatinib × wild-type and T315I) and ran 12 × 100 ns GROMACS simulations with CHARMM27 and explicit solvent — in-silico mutagenesis on a GCP L4 GPU',
+            'Reproduced the clinical resistance mechanism: T315I collapsed imatinib’s gatekeeper contact from 97% to 53% occupancy at a cost of 0.6 H-bonds per frame, while ponatinib was unaffected',
+            'Built the RMSD/RMSF, hydrogen-bond, and pocket-contact analysis pipeline in Python from scratch'
+        ],
+        link: 'https://github.com/Ankit-kumar91/t315i-kinase-md-simulations',
+        tags: ['GROMACS', 'CHARMM27', 'ChimeraX', 'PyMOL', 'VMD', 'NumPy', 'GCP'],
+        image: '/md-t315i.jpg',
+    },
+    {
+        title: 'AqSolPrediction — Aqueous Solubility Prediction',
+        description: 'An end-to-end cheminformatics service predicting aqueous solubility from a SMILES string, live and public on Hugging Face Spaces.',
+        featured: true,
+        metrics: [
+            { value: '0.88', label: 'Test R²' },
+            { value: '~10k', label: 'AqSolDB compounds' },
+            { value: 'Live', label: 'Public demo' },
+        ],
+        bullets: [
+            'Built an ML regression pipeline on AqSolDB (~10k compounds) using RDKit molecular descriptors and Morgan fingerprints, reaching test R² = 0.88',
+            'Deployed an interactive web app on Hugging Face Spaces taking real-time SMILES input',
+            'Packaged the model behind a FastAPI service in Docker for reuse outside the demo UI'
         ],
         link: 'https://github.com/Ankit-kumar91/AqSolPrediction',
         demoLink: 'https://huggingface.co/spaces/Ankitkumar91/aqsol-prediction',
-        tags: ['Python', 'RDKit', 'Cheminformatics', 'Hugging Face', 'ML'],
-        image: '/aqsol.png',
+        demoLabel: 'Live demo',
+        tags: ['RDKit', 'Scikit-Learn', 'Hugging Face', 'FastAPI', 'Docker'],
+        image: '/aqsol.jpg',
     },
     {
-        title: 'AgronomiCare: Plant Disease Prediction',
-        description: 'A machine learning web application for agricultural disease prediction using classification algorithms with a complete data pipeline.',
+        title: 'AgronomiCare — Plant Disease Prediction',
+        description: 'A classification web app for agricultural disease prediction with a complete data pipeline, built during the data science bootcamp.',
         bullets: [
-            'Developed ML web application for agricultural disease prediction using classification algorithms',
-            'Implemented complete data pipeline: data collection, cleaning, feature extraction, model training, deployment'
+            'Developed an ML web application for agricultural disease prediction using classification algorithms',
+            'Implemented the full pipeline: data collection, cleaning, feature extraction, model training, and deployment'
         ],
         link: 'https://github.com/Ankit-kumar91/AgronomiCare',
-        tags: ['Python', 'Machine Learning', 'Web App', 'Agriculture'],
-        image: '/agronomicare.png',
+        tags: ['Python', 'Machine Learning', 'Web App'],
+        image: '/agronomicare.jpg',
     },
     {
         title: 'Kickstarter Success Prediction',
-        description: 'Multi-model classification system comparing logistic regression, KNN, XGBoost, and Random Forest on real-world business data.',
+        description: 'Multi-model classification comparing logistic regression, KNN, XGBoost, and Random Forest on a real-world business dataset.',
         bullets: [
-            'Built multi-model classification system comparing logistic regression, KNN, XGBoost, and Random Forest',
-            'Performed extensive feature engineering and data preprocessing on real-world business dataset'
+            'Built a multi-model classification system and compared performance across four algorithm families',
+            'Performed extensive feature engineering and preprocessing on messy real-world data'
         ],
         link: 'https://github.com/Ankit-kumar91/ds-ml-project-kickstarter',
-        tags: ['Python', 'XGBoost', 'Random Forest', 'Data Analysis'],
-        image: '/kickstarter.png',
+        tags: ['Python', 'XGBoost', 'Random Forest'],
+        image: '/kickstarter.jpg',
     },
 ];
 
 export const PUBLICATIONS_INFO: PublicationInfo = {
-    summary: 'Authored 13 peer-reviewed publications in high-impact international journals, contributing to the fields of synthetic organic chemistry, materials science, and photochemistry.',
-    scholarUrl: 'https://scholar.google.com/citations?user=YTn_UVIAAAAJ&hl=en'
+    summary: 'Author of 13 peer-reviewed publications in international journals across synthetic organic chemistry, materials science, and photochemistry — including J. Org. Chem., Org. Lett., and Inorganic Chemistry.',
+    scholarUrl: PERSONAL_INFO.scholarUrl
 };
 
 export const PUBLICATIONS: Publication[] = [
@@ -192,48 +248,71 @@ export const PUBLICATIONS: Publication[] = [
 ];
 
 export const LANGUAGES: Language[] = [
-    { name: 'German', level: 'Professional Working (B1 Certified)', description: 'Comfortable in professional environments' },
     { name: 'English', level: 'Full Professional Proficiency', description: 'Fluent in technical and business contexts' },
+    { name: 'German', level: 'B1 Certified', description: 'Comfortable in professional environments' },
     { name: 'Hindi', level: 'Native Proficiency', description: 'Mother tongue' },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
-        title: 'AI & Machine Learning',
+        title: 'Machine Learning & AI',
         skills: [
             { name: 'Machine Learning Algorithms', icon: <CpuChipIcon /> },
             { name: 'Deep Learning', icon: <CpuChipIcon /> },
-            { name: 'Predictive Modeling', icon: <ChartPieIcon /> },
-            { name: 'PyTorch', icon: <CodeBracketIcon /> },
-            { name: 'Scikit-Learn', icon: <CodeBracketIcon /> },
+            { name: 'Graph Neural Networks', icon: <CpuChipIcon /> },
+            { name: 'Conformal Uncertainty Estimation', icon: <ChartPieIcon /> },
             { name: 'Generative AI / LLMs', icon: <CpuChipIcon /> },
         ]
     },
     {
-        title: 'Cheminformatics & CADD',
+        title: 'Cheminformatics & QSAR',
         skills: [
             { name: 'RDKit', icon: <BeakerIcon /> },
+            { name: 'Molecular Fingerprints & Descriptors', icon: <BeakerIcon /> },
             { name: 'QSAR Modeling', icon: <BeakerIcon /> },
+            { name: 'Chemprop (D-MPNN)', icon: <CodeBracketIcon /> },
+            { name: 'Applicability Domain Analysis', icon: <ChartPieIcon /> },
+        ]
+    },
+    {
+        title: 'Computer-Aided Drug Design',
+        skills: [
             { name: 'Molecular Docking', icon: <BeakerIcon /> },
-            { name: 'Molecular Property Prediction', icon: <CpuChipIcon /> },
-        ]
-    },
-    {
-        title: 'Molecular Modeling & Dynamics',
-        skills: [
+            { name: 'Virtual Screening', icon: <BeakerIcon /> },
+            { name: 'Free Energy Perturbation (FEP)', icon: <BeakerIcon /> },
             { name: 'Molecular Dynamics (GROMACS)', icon: <BeakerIcon /> },
-            { name: 'Maestro & LiveDesign', icon: <BeakerIcon /> },
-            { name: 'VMD / ChimeraX', icon: <BeakerIcon /> },
-            { name: 'Ligand Library Design', icon: <BeakerIcon /> },
+            { name: 'Schrödinger Maestro & LiveDesign', icon: <BeakerIcon /> },
         ]
     },
     {
-        title: 'Data Science & Chemistry',
+        title: 'Programming & MLOps',
         skills: [
-            { name: 'Python (Pandas, NumPy)', icon: <CodeBracketIcon /> },
-            { name: 'Statistical Analysis', icon: <ChartPieIcon /> },
-            { name: 'SQL & Databases', icon: <DocumentTextIcon /> },
-            { name: 'NMR, FT-IR, UV-Vis, HPLC', icon: <BeakerIcon /> },
+            { name: 'Python', icon: <CodeBracketIcon /> },
+            { name: 'Scikit-Learn, PyTorch', icon: <CodeBracketIcon /> },
+            { name: 'SQL', icon: <DocumentTextIcon /> },
+            { name: 'Git, Docker', icon: <CodeBracketIcon /> },
+            { name: 'FastAPI, Streamlit', icon: <CodeBracketIcon /> },
+            { name: 'Weights & Biases, GCP', icon: <ChartPieIcon /> },
+        ]
+    },
+    {
+        title: 'Data Sources & Platforms',
+        skills: [
+            { name: 'ChEMBL', icon: <DocumentTextIcon /> },
+            { name: 'PubChem', icon: <DocumentTextIcon /> },
+            { name: 'Protein Data Bank (PDB)', icon: <DocumentTextIcon /> },
+            { name: 'Hugging Face', icon: <CodeBracketIcon /> },
+            { name: 'ChimeraX, PyMOL, VMD', icon: <BeakerIcon /> },
+        ]
+    },
+    {
+        title: 'Experimental & Analytical',
+        skills: [
+            { name: 'Organic Synthesis', icon: <BeakerIcon /> },
+            { name: 'Process Chemistry & Scale-Up', icon: <BeakerIcon /> },
+            { name: 'NMR, HR-MS', icon: <BeakerIcon /> },
+            { name: 'HPLC, GC-MS', icon: <BeakerIcon /> },
+            { name: 'X-ray Crystallography', icon: <BeakerIcon /> },
         ]
     },
 ];

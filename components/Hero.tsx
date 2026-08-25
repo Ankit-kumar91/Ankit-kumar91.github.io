@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PERSONAL_INFO } from '../constants';
-import { GitHubIcon, LinkedInIcon, ScholarIcon, ChevronDownIcon } from './icons/Icons';
+import { GitHubIcon, LinkedInIcon, ScholarIcon, ChevronDownIcon, DocumentDownloadIcon } from './icons/Icons';
 import { useTheme } from '../ThemeContext';
 
 const TITLE_SEGMENTS = PERSONAL_INFO.title.split('|').map(s => s.trim());
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
 
     return (
         <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-colors duration-300`}>
-            <div className={`absolute inset-0 ${isDark ? 'bg-[#0a0a0a]' : 'bg-gradient-to-br from-[#f0f9ff] to-[#e0f2fe]'}`}></div>
+            <div className={`absolute inset-0 ${isDark ? '' : 'bg-gradient-to-br from-[#f0f9ff]/70 to-[#e0f2fe]/70'}`}></div>
 
             <div className="absolute inset-0 overflow-hidden">
                 <div className={`absolute -top-40 -left-40 w-96 h-96 ${isDark ? 'bg-[#00d4ff]/10' : 'bg-[#00d4ff]/5'} rounded-full blur-3xl animate-float-1`}></div>
@@ -68,22 +68,24 @@ const Hero: React.FC = () => {
                             <span className="typing-cursor"></span>
                         </p>
 
-                        <p className={`text-base md:text-lg max-w-xl mb-8 leading-relaxed text-justify ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                            I apply machine learning and AI to accelerate the discovery of novel, affordable therapeutics that improve human health. With a Ph.D. in Chemistry, I bridge cheminformatics, molecular modeling, and artificial intelligence to build end-to-end drug discovery solutions—from molecular design and data generation to predictive modeling and decision-making.
+                        <p className={`text-base md:text-lg max-w-xl mb-8 leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                            I apply machine learning and AI to accelerate the discovery of novel, affordable therapeutics that improve human health. With a Ph.D. in Chemistry, I bridge cheminformatics, molecular modeling, and artificial intelligence to build end-to-end drug discovery solutions, from molecular design and data generation to predictive modeling and decision-making.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
                             <a
                                 href="#projects"
-                                className="px-8 py-3.5 bg-[#00d4ff] hover:bg-[#00bcd4] text-[#0a0a0a] font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-[#00d4ff]/25 hover:-translate-y-0.5"
+                                className="cta-glow px-8 py-3.5 bg-gradient-to-r from-[#00d4ff] to-[#00bcd4] hover:from-[#22ddff] hover:to-[#00cde6] text-[#0a0a0a] font-semibold rounded-xl transition-all hover:-translate-y-0.5"
                             >
                                 View Projects
                             </a>
                             <a
-                                href="#contact"
-                                className={`px-8 py-3.5 font-semibold rounded-xl backdrop-blur-sm transition-all hover:-translate-y-0.5 ${isDark ? 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-[#00d4ff]/30' : 'bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 hover:border-[#00d4ff]/30 shadow-sm'}`}
+                                href={PERSONAL_INFO.resumeUrl}
+                                download
+                                className={`inline-flex items-center gap-2 px-8 py-3.5 font-semibold rounded-xl backdrop-blur-sm transition-all hover:-translate-y-0.5 ${isDark ? 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-[#00d4ff]/30' : 'bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 hover:border-[#00d4ff]/30 shadow-sm'}`}
                             >
-                                Get in Touch
+                                <DocumentDownloadIcon />
+                                Download CV
                             </a>
                         </div>
 
@@ -98,7 +100,7 @@ const Hero: React.FC = () => {
                                aria-label="LinkedIn">
                                 <LinkedInIcon />
                             </a>
-                            <a href="https://scholar.google.com/citations?user=YTn_UVIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"
+                            <a href={PERSONAL_INFO.scholarUrl} target="_blank" rel="noopener noreferrer"
                                className={`transition-colors p-2.5 rounded-lg hover:text-[#00d4ff] ${isDark ? 'text-gray-500 hover:bg-white/5' : 'text-gray-400 hover:bg-gray-100'}`}
                                aria-label="Google Scholar">
                                 <ScholarIcon />
@@ -112,8 +114,10 @@ const Hero: React.FC = () => {
                             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#0097a7] photo-ring opacity-50"></div>
                             <div className={`absolute inset-[4px] rounded-full overflow-hidden ${isDark ? 'bg-[#0a0a0a]' : 'bg-white'}`}>
                                 <img
-                                    src="/akphoto2.png"
+                                    src="/akphoto.jpg"
                                     alt="Ankit Kumar"
+                                    width={800}
+                                    height={800}
                                     className="w-full h-full object-cover rounded-full"
                                 />
                             </div>
@@ -124,10 +128,14 @@ const Hero: React.FC = () => {
                     </div>
                 </div>
 
-                <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
-                    <ChevronDownIcon />
-                </div>
             </div>
+
+            {/* anchored to the section, not the content column, so it sits at the true bottom */}
+            <a href="#about"
+               aria-label="Scroll to About"
+               className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce transition-colors hover:text-[#00d4ff] ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                <ChevronDownIcon />
+            </a>
         </section>
     );
 };

@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
         { icon: <MailIcon />, href: `mailto:${PERSONAL_INFO.email}`, label: 'Email' },
         { icon: <LinkedInIcon />, href: PERSONAL_INFO.linkedinUrl, label: 'LinkedIn' },
         { icon: <GitHubIcon />, href: PERSONAL_INFO.githubUrl, label: 'GitHub' },
-        { icon: <ScholarIcon />, href: 'https://scholar.google.com/citations?user=YTn_UVIAAAAJ&hl=en', label: 'Scholar' },
+        { icon: <ScholarIcon />, href: PERSONAL_INFO.scholarUrl, label: 'Scholar' },
     ];
 
     return (
-        <footer className={`border-t transition-colors duration-300 ${isDark ? 'bg-[#0a0a0a] border-white/5' : 'bg-white border-gray-200'}`}>
+        <footer className={`border-t transition-colors duration-300 ${isDark ? 'border-white/5' : 'bg-white/60 border-gray-200'}`}>
             <div className="max-w-6xl mx-auto px-6 py-8">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>

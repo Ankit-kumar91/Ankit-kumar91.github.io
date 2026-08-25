@@ -17,6 +17,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Claude Code
+CLAUDE.md
+
 # Python (resume generator)
 resume.py
 .python-version

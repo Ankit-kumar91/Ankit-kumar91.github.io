@@ -35,7 +35,9 @@ const Education: React.FC = () => {
                             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00d4ff] flex-shrink-0"></span>
                             <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                                 <span className="font-medium">{cert.name}</span>
-                                <span className={isDark ? 'text-gray-500' : 'text-gray-500'}> — {cert.issuer}</span>
+                                <span className={isDark ? 'text-gray-500' : 'text-gray-500'}>
+                                    {' '}— {cert.issuer}{cert.year ? ` (${cert.year})` : ''}
+                                </span>
                             </p>
                         </div>
                     ))}

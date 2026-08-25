@@ -16,15 +16,15 @@ function AppContent() {
     const isDark = theme === 'dark';
 
     return (
-        <div className={`${isDark ? 'bg-[#0a0a0a] text-gray-300' : 'bg-[#f8f9fa] text-gray-700'} font-sans leading-relaxed transition-colors duration-300`}>
+        <div className={`app-shell ${isDark ? 'text-gray-300' : 'text-gray-700'} font-sans leading-relaxed transition-colors duration-300`}>
             <Header />
             <main>
                 <Hero />
                 <About />
+                <Projects />
+                <Skills />
                 <Experience />
                 <Education />
-                <Skills />
-                <Projects />
                 <Publication />
                 <Contact />
             </main>

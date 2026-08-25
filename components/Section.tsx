@@ -41,12 +41,12 @@ const Section: React.FC<SectionProps> = ({ id, title, subtitle, children, classN
         >
             <div className="max-w-6xl mx-auto px-6">
                 <div className="reveal text-center mb-16">
-                    <h2 className={`text-3xl md:text-4xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                    <h2 className={`text-3xl md:text-[2.6rem] font-bold mb-4 leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         {title}
                     </h2>
-                    <div className="w-20 h-1 bg-[#00d4ff] mx-auto rounded-full mb-4"></div>
+                    <div className="section-rule mb-5"></div>
                     {subtitle && (
-                        <p className={`text-lg max-w-2xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                        <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                             {subtitle}
                         </p>
                     )}

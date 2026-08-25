@@ -11,8 +11,11 @@ export interface Project {
   bullets: string[];
   link: string;
   demoLink?: string;
+  demoLabel?: string;
+  metrics?: { value: string; label: string }[];
   tags: string[];
   image?: string;
+  featured?: boolean;
 }
 
 export interface ResearchHighlight {
@@ -51,6 +54,7 @@ export interface Education {
 export interface Certification {
   name: string;
   issuer: string;
+  year?: string;
 }
 
 export interface Skill {

@@ -11,16 +11,16 @@ const Contact: React.FC = () => {
     const contactLinks = [
         { icon: <MailIcon />, label: 'Email', value: PERSONAL_INFO.email, href: `mailto:${PERSONAL_INFO.email}` },
         { icon: <MapPinIcon />, label: 'Location', value: PERSONAL_INFO.address, href: '' },
-        { icon: <DocumentDownloadIcon />, label: 'Resume', value: 'Download Resume', href: '/Ankit_Resume.pdf', download: true },
+        { icon: <DocumentDownloadIcon />, label: 'CV', value: 'Download CV (PDF)', href: PERSONAL_INFO.resumeUrl, download: true },
     ];
     const socialLinks = [
         { icon: <LinkedInIcon />, label: 'LinkedIn', href: PERSONAL_INFO.linkedinUrl },
         { icon: <GitHubIcon />, label: 'GitHub', href: PERSONAL_INFO.githubUrl },
-        { icon: <ScholarIcon />, label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=YTn_UVIAAAAJ&hl=en' },
+        { icon: <ScholarIcon />, label: 'Google Scholar', href: PERSONAL_INFO.scholarUrl },
     ];
 
     return (
-        <Section id="contact" title="Get in Touch" subtitle="I'm open to new opportunities and collaborations" className={`border-t ${isDark ? 'border-white/5' : 'border-gray-200'}`}>
+        <Section id="contact" title="Get in Touch" subtitle="Open to roles in computational drug discovery, cheminformatics, and applied ML — and to research collaborations" className={`border-t ${isDark ? 'border-white/5' : 'border-gray-200'}`}>
             <div className="reveal max-w-3xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-4 mb-10">
                     {contactLinks.map((item) => (
@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="text-center mb-10">
                     <a href={`mailto:${PERSONAL_INFO.email}`}
-                       className="inline-flex items-center gap-2 px-8 py-4 bg-[#00d4ff] hover:bg-[#00bcd4] text-[#0a0a0a] font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-[#00d4ff]/25 hover:-translate-y-0.5 text-lg">
+                       className="cta-glow inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#00d4ff] to-[#00bcd4] hover:from-[#22ddff] hover:to-[#00cde6] text-[#0a0a0a] font-semibold rounded-xl transition-all hover:-translate-y-0.5 text-lg">
                         <MailIcon />
                         Say Hello
                     </a>

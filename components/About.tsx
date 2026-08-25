@@ -5,11 +5,13 @@ import { useTheme } from '../ThemeContext';
 
 const SKILL_BARS = [
     { name: 'Machine Learning', level: 90 },
-    { name: 'RDKit / Cheminformatics', level: 85 },
     { name: 'Python', level: 90 },
-    { name: 'Deep Learning', level: 80 },
+    { name: 'RDKit / Cheminformatics', level: 85 },
+    { name: 'QSAR Modeling', level: 85 },
+    { name: 'Deep Learning / GNNs', level: 80 },
+    { name: 'Virtual Screening & Docking', level: 80 },
     { name: 'Molecular Modeling (Maestro)', level: 75 },
-    { name: 'Molecular Dynamics (GROMACS)', level: 70 },
+    { name: 'Molecular Dynamics (GROMACS)', level: 75 },
 ];
 
 const About: React.FC = () => {
@@ -80,7 +82,7 @@ const About: React.FC = () => {
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-[#00d4ff] font-semibold text-sm min-w-[100px]">Domain:</span>
-                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>AI/ML, Cheminformatics, CADD, Chemistry</span>
+                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Machine learning/AI, computer aided drug design, Chemistry</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-[#00d4ff] font-semibold text-sm min-w-[100px]">Education:</span>
@@ -92,7 +94,7 @@ const About: React.FC = () => {
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-[#00d4ff] font-semibold text-sm min-w-[100px]">Other Skills:</span>
-                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Organic Synthesis, Spectroscopy, Process Chemistry, Analytical Chemistry, Git, VS Code, Docker</span>
+                                <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Organic Synthesis, Spectroscopy, Process Chemistry, Analytical Chemistry, FastAPI, Streamlit, Docker, Git, GCP</span>
                             </div>
                         </div>
                     </div>
